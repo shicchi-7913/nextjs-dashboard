@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    container_name: next_app_db
+    environment:
+      POSTGRES_USER: nextuser
+      POSTGRES_PASSWORD: nextpass
+      POSTGRES_DB: nextapp
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
