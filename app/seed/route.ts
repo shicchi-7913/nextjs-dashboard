@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt';
-import pg from 'pg';
 import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 import { client } from '../lib/sql-client';
 
